@@ -61,5 +61,6 @@ public class Deck : MonoBehaviour
         owners[childIndex] = _newOwner;
 
         WinCondition.Instance.CheckForWin(owners);
+        TieConditions.Instance.CheckTie();
     }
 }

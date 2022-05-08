@@ -25,5 +25,6 @@ public class TurnController : MonoBehaviour
     public void ChangeTurn(PlayerController player)
     {
         playerToMove = player;
+        TieConditions.Instance.CheckTie();
     }
 }

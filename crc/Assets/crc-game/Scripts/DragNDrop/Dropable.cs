@@ -64,6 +64,7 @@ public class Dropable : MonoBehaviour
 					autoMoveArrivalThreshold
 				).OnArrival = (_) => FinishDrop();
 
+
 				ClearDropzone(targetDropzone);
 
 				targetDropzone.GetComponent<Square>().SetOwner(TurnController.Instance.PlayerToMove);

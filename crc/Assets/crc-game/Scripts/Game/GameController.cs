@@ -87,6 +87,17 @@ public class GameController : MonoBehaviour
         EndGame();
     }
 
+    public void SetTie()
+    {
+        GameObject.Find("AudioWinner").GetComponent<AudioSource>().Play(); // надо поменять звук на звук тая
+
+        GameObject window = Instantiate(Resources.Load<GameObject>("Prefabs/GameOverWindowSingleTie"), new Vector3(0, 0, 0), Quaternion.identity);
+        window.transform.SetParent(GameObject.Find("Canvas").transform);
+        window.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
+
+        EndGame();
+    }
+
     private void EndGame()
     {
         gameInProgress = false;
